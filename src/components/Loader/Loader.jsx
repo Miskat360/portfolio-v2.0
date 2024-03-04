@@ -17,6 +17,7 @@ const Loader = () => {
             ease: "expo.inOut"
         })
     })
+    console.log("loading")
     return (
         <>
             <div ref={loaderContainerRef} className='text-white bg-[#1c1d20] w-full h-screen fixed top-0 left-0 z-[999] flex items-center justify-center cursor-none overflow-hidden'>

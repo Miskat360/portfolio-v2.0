@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import LocomotiveScroll from 'locomotive-scroll'
 import { motion, useScroll, useSpring } from "framer-motion";
 
@@ -13,7 +13,7 @@ import ScrollingSliders from '../components/ScrollingSlider/ScrollingSliders'
 import Footer from '../components/Footer/Footer'
 
 const Home = () => {
-    const locomotiveScroll = new LocomotiveScroll();
+    const locomotiveScroll = new LocomotiveScroll()
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
@@ -23,14 +23,14 @@ const Home = () => {
 
     return (
         <>
+            <motion.div className="progress-bar" style={{ scaleX }} />
+            <Loader />
+            <Navbar />
+            <HeroSection />
+            <AboutSection />
+            <ZoomParallax />
+            <Projects />
             <div className="overflow-x-hidden">
-                <motion.div className="progress-bar" style={{ scaleX }} />
-                <Loader />
-                <Navbar />
-                <HeroSection />
-                <AboutSection />
-                <ZoomParallax />
-                <Projects />
                 <ScrollingSliders />
                 <Footer />
             </div>

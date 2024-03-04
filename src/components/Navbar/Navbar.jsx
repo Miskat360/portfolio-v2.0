@@ -6,6 +6,7 @@ import SideNavbar from '../SideNavbar/SideNavbar'
 import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+
     const [navShowHide, setNavShowHide] = useState(false)
     const [scrollBtnToggle, setScrollBtnToggle] = useState(false)
     const [sideNavBtnShowHide, setSideNavBtnShowHide] = useState(false)
@@ -13,7 +14,6 @@ const Navbar = () => {
     const copyrightRef = useRef(null)
     const nameRef = useRef(null)
     const activeLink = useRef('')
-    // console.log(activeLink.current.className)
     const [spin, setSpin] = useState(false)
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light")
     const handleThemeToggle = (e) => {
@@ -36,6 +36,8 @@ const Navbar = () => {
             setScrollBtnToggle(false)
         }
     }
+
+
     return (
         <>
             <div className="w-full dark:bg-[#1C1D20] bg-[#999D9E] px-[4vw] lg:h-[6vw] md:h-[10vw] sm:h-[12vw] h-[18vw] text-white flex items-center justify-between">
@@ -88,7 +90,7 @@ const Navbar = () => {
                 </div>
                 <div className='md:hidden block' onClick={() => {
                     navShowHide ? setNavShowHide(false) : setNavShowHide(true);
-                    sideNavBtnShowHide ? setSideNavBtnShowHide(false) : setSideNavBtnShowHide(true)
+                    sideNavBtnShowHide ? setSideNavBtnShowHide(false) : setSideNavBtnShowHide(true);
                 }}>
                     <Magnetic points={0.5}>
                         <p className='cursor-pointer w-[10vw] h-[10vw] rounded-full flex items-center justify-center text-lg before:w-[1vw] before:h-[1vw] before:bg-white before:rounded-full gap-[1vw]'>
@@ -97,7 +99,6 @@ const Navbar = () => {
                     </Magnetic>
                 </div>
             </div>
-
             <div className={`${scrollBtnToggle ? "scale-100" : "scale-0"} fixed right-8 top-8 z-[90]`} style={{ transition: "transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)" }}>
                 <Button size={"85px"}>
                     <div className='w-full h-full bg-[#1C1D20] dark:bg-white text-white dark:text-black'>
@@ -106,7 +107,8 @@ const Navbar = () => {
                                 <label className="btn-circle swap swap-rotate">
                                     {/* this hidden checkbox controls the state */}
                                     <input type="checkbox" onChange={() => {
-                                        navShowHide ? setNavShowHide(false) : setNavShowHide(true)
+                                        navShowHide ? setNavShowHide(false) : setNavShowHide(true);
+                                        setLockSmooth(!lockSmooth)
                                     }} />
                                     {/* hamburger icon */}
                                     <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
@@ -117,7 +119,7 @@ const Navbar = () => {
                         </Magnetic>
                     </div>
                 </Button>
-            </div>
+            </div >
             <SideNavbar setNavShowHide={setNavShowHide} navShowHide={navShowHide} sideNavBtnShowHide={sideNavBtnShowHide} setSideNavBtnShowHide={setSideNavBtnShowHide} />
         </>
     )
