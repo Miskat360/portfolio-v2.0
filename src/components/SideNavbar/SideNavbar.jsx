@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import Button from '../../common/Button/index'
 import Magnetic from '../../common/Magnetic/index'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const SideNavbar = ({ navShowHide, setNavShowHide, sideNavBtnShowHide, setSideNavBtnShowHide }) => {
     const container = useRef(null)
@@ -55,9 +56,11 @@ const SideNavbar = ({ navShowHide, setNavShowHide, sideNavBtnShowHide, setSideNa
                     <p className='text-xs uppercase pb-[4vh] border-b border-zinc-600 mb-[4vw]'>navigation</p>
                     <ul>
                         {["home", "work", "about", "contact"].map((item, index) => (
-                            <Magnetic points={0.07}>
-                                <li key={index} className='md:text-[3.8vw] text-[10vw] capitalize md:leading-tight leading-snug md:after:w-[1vw] md:after:h-[1vw] after:w-[2vw] after:h-[2vw] after:bg-white after:rounded-full hover:after:block after:hidden cursor-pointer hover:text-white flex items-center justify-between pr-[4vw]'><a href="/">{item}</a></li>
-                            </Magnetic>
+                            <Link to={`${item == "home" ? '/' : '/'+item}`}>
+                                <Magnetic points={0.07}>
+                                    <li key={index} className='md:text-[3.8vw] text-[10vw] capitalize md:leading-tight leading-snug md:after:w-[1vw] md:after:h-[1vw] after:w-[2vw] after:h-[2vw] after:bg-white after:rounded-full hover:after:block after:hidden cursor-pointer hover:text-white flex items-center justify-between pr-[4vw]'><a href="/">{item}</a></li>
+                                </Magnetic>
+                            </Link>
                         ))}
                     </ul>
                     <div className="absolute md:bottom-0 bottom-[2%] w-full">
