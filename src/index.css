@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: montral;
+    src: url(../public/fonts/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+    font-family: founder;
+    src: url(../public/fonts/FoundersGrotesk-Semibold.otf);
+}
+
+body {
+    font-family: montral;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

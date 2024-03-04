@@ -1,0 +1,11 @@
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #fff;
+    mix-blend-mode: difference;
+    transform-origin: 0%;
+    z-index: 99;
+}
