@@ -19,10 +19,10 @@ const SideNavbar = ({ navShowHide, setNavShowHide, sideNavBtnShowHide, setSideNa
 
     return (
         <>
-            <div className={`fixed ${navShowHide ? "right-0" : "right-[-100%]"} top-0 right-0 dark:bg-[#1C1D20] bg-white dark:text-white text-[#1c1d20] hover:text-black xl:w-[34vw] lg:w-[38vw] md:w-[45vw] w-full h-screen z-10 p-[4vw] transition-all duration-300`}>
+            <div className={`fixed ${navShowHide ? "right-0" : "right-[-100%]"} top-0 right-0 dark:bg-[#1C1D20] bg-[#ddd9d9] dark:text-white text-[#1c1d20] hover:text-black md:border-l xl:w-[34vw] lg:w-[38vw] md:w-[45vw] w-full h-screen z-[11] p-[4vw] transition-all duration-300`}>
                 <div className={`relative w-full h-full`}>
                     <div className={`${sideNavBtnShowHide ? "flex" : "hidden"} justify-end`}>
-                        <Button size={"65px"}>
+                        <Button bigBtn={65} smallBtn={65}>
                             <div className='w-full h-full dark:bg-black bg-[#1c1d20]'>
                                 <Magnetic points={0.4}>
                                     <p className='flex items-center justify-center'>

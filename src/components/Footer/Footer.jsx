@@ -20,7 +20,7 @@ const Footer = () => {
                     <div className='part-2 w-full flex items-center relative justify-end'>
                         <div className='w-full h-[1px] dark:bg-slate-400 bg-[#1c1d20] absolute'></div>
                         <div data-scroll data-scroll-speed="-.2" data-scroll-direction ="horizontal" className="mr-[4vw]">
-                            <Button size={"185px"}>
+                            <Button bigBtn={185} smallBtn={100}>
                                 <div className='w-full h-full  bg-[#455CE9]'>
                                     <Magnetic points={0.5}>
                                         <p className='text-white'>Get in teuch</p>
@@ -31,7 +31,7 @@ const Footer = () => {
                     </div>
                     <div className='part-3 flex gap-[2vw] -mt-6'>
                         {["gmcmarchantcenter@gmail.com", "+8801859580365"].map((item, index) => (
-                            <Button fill={true}>
+                            <Button fill={true} key={index}>
                                 <Magnetic points={0.2}>
                                     <p key={index} className='py-[1.6vw] px-[3vw] text-[1.2vw] tracking-wider'>{item}</p>
                                 </Magnetic>

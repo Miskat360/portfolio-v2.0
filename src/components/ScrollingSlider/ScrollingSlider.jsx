@@ -9,7 +9,7 @@ const ScrollingSlider = ({ sliderItem, diraction, x1, x2 }) => {
                 <motion.div style={diraction === "leftToRight" ? {x:x1}:{x:x2}} className='flex !overflow-x-hidden gap-6 justify-center items-center'>
                     {
                         sliderItem.map((item, index) => (
-                            <div className='w-[32vw] '>
+                            <div key={index} className='w-[32vw] '>
                                 {item.type === "img" ? <img src={item.src} /> : <video muted autoPlay loop>
                                     <source src={item.src} type='video/mp4' />
                                 </video>}

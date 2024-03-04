@@ -34,7 +34,7 @@ const Projects = () => {
         <div className='border-b dark:border-zinc-700 border-[#1c1d2032] w-full flex flex-col items-center justify-center'>
           {
             projects.map((item, index) => (
-              <Project title={item.title} index={index} setModal={setModal} />
+              <Project key={index} title={item.title} index={index} setModal={setModal} />
             ))
           }
         </div>

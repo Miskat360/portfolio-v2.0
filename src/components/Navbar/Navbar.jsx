@@ -58,7 +58,7 @@ const Navbar = () => {
                 <div className='md:block hidden'>
                     <ul className="flex gap-4 items-center">
                         {["work", "about", "contact"].map((item, index) => (
-                            <NavLink to={`/${item}`} ref={activeLink}>
+                            <NavLink to={`/${item}`} ref={activeLink} key={index}>
                                 <Magnetic points={0.5}>
                                     <li key={index} className="text-lg capitalize py-3 px-4">
                                         <a href="" className={`flex flex-col items-center ${styles.dot}`}>{item}<span className={`${activeLink.current.className == "active" ? "opacity-100" : "opacity-0"} w-[5px] h-[5px] bg-white rounded-full`}></span></a>
@@ -119,15 +119,14 @@ const Navbar = () => {
                 </div>
             </div>
             <div className={`${scrollBtnToggle ? "scale-100" : "scale-0"} fixed right-8 top-8 z-[90]`} style={{ transition: "transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)" }}>
-                <Button size={"85px"}>
+                <Button smallBtn={75} bigBtn={85}>
                     <div className='w-full h-full bg-[#1C1D20] dark:bg-white text-white dark:text-black'>
                         <Magnetic points={0.4}>
                             <p>
                                 <label className="btn-circle swap swap-rotate">
                                     {/* this hidden checkbox controls the state */}
                                     <input type="checkbox" onChange={() => {
-                                        navShowHide ? setNavShowHide(false) : setNavShowHide(true);
-                                        setLockSmooth(!lockSmooth)
+                                        navShowHide ? setNavShowHide(false) : setNavShowHide(true)
                                     }} />
                                     {/* hamburger icon */}
                                     <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
