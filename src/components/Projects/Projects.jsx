@@ -29,7 +29,7 @@ const Projects = () => {
   const [modal, setModal] = useState({ active: false, index: 0 })
   return (
     <>
-      <div className="w-full px-[4vw] dark:bg-black bg-white text-[#1c1d20] dark:text-white pb-[3vw] pt-[8vw] cursor-pointer">
+      <div className="md:block hidden w-full px-[4vw] dark:bg-black bg-white text-[#1c1d20] dark:text-white pb-[3vw] pt-[8vw] cursor-pointer">
         <p className='px-[11vw] uppercase text-xs mb-[3vw]'>recent projects</p>
         <div className='border-b dark:border-zinc-700 border-[#1c1d2032] w-full flex flex-col items-center justify-center'>
           {

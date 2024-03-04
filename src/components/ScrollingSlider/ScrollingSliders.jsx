@@ -58,12 +58,12 @@ const ScrollingSliders = () => {
     ]
     return (
         <>
-            <div ref={container} className="w-full min-h-screen dark:bg-black bg-white flex flex-col gap-[2.5vw] overflow-x-hidden">
+            <div ref={container} className="w-full sm:min-h-screen h-auto dark:bg-black bg-white flex flex-col gap-[2.5vw] overflow-x-hidden sm:pt-0 pt-20 sm:pb-0 pb-10">
                 <ScrollingSlider sliderItem={slider1} x1={x1} diraction={"leftToRight"} />
                 <ScrollingSlider sliderItem={slider2} x2={x2} />
             </div>
             <motion.div style={{ height }} className='relative'>
-                <div className='h-[1550%] w-[120%] absolute left-[-10%] rounded-[0_0_50%_50%] dark:bg-black bg-white z-10 shadow-[0px_30px_50px_rgba(0,0,0,0.748)] overflow-x-hidden'></div>
+                <div className='sm:h-[1550%] h-[800%] w-[120%] absolute left-[-10%] rounded-[0_0_50%_50%] dark:bg-black bg-white z-10 shadow-[0px_40px_50px_rgba(0,0,0,0.748)] overflow-x-hidden'></div>
             </motion.div>
         </>
     )
