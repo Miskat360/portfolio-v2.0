@@ -12,7 +12,7 @@ const Loader = () => {
             stagger: 0.15
         })
         gsap.to(loaderContainerRef.current, {
-            top: "-100%",
+            top: "-120%",
             delay:3,
             ease: "expo.inOut"
         })
