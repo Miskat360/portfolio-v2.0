@@ -23,13 +23,13 @@ const Home = () => {
 
     return (
         <>
-            {/* <motion.div className="progress-bar" style={{ scaleX }} />
+            <motion.div className="progress-bar" style={{ scaleX }} />
             <Loader />
             <Navbar />
             <HeroSection />
             <AboutSection />
             <ZoomParallax />
-            <Projects /> */}
+            <Projects />
             <div className="overflow-x-hidden">
                 <ScrollingSliders />
                 <Footer />
