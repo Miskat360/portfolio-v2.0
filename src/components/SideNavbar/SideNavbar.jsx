@@ -21,8 +21,8 @@ const SideNavbar = ({ navShowHide, setNavShowHide, sideNavBtnShowHide, setSideNa
         <>
             <div className={`fixed ${navShowHide ? "right-0" : "right-[-100%]"} top-0 right-0 dark:bg-[#1C1D20] bg-[#ddd9d9] dark:text-white text-[#1c1d20] hover:text-black md:border-l xl:w-[34vw] lg:w-[38vw] md:w-[45vw] w-full h-screen z-[11] p-[4vw] transition-all duration-300`}>
                 <div className={`relative w-full h-full`}>
-                    <div className={`${sideNavBtnShowHide ? "flex" : "hidden"} justify-end`}>
-                        <Button bigBtn={65} smallBtn={65}>
+                    <div className={`${sideNavBtnShowHide ? "opacity-0" : "opacity-100"} flex justify-end`}>
+                        <Button className="w-[15vw] h-[15vw] sm:w-[5.5vw] sm:h-[5.5vw]">
                             <div className='w-full h-full dark:bg-black bg-[#1c1d20]'>
                                 <Magnetic points={0.4}>
                                     <p className='flex items-center justify-center'>
@@ -47,12 +47,12 @@ const SideNavbar = ({ navShowHide, setNavShowHide, sideNavBtnShowHide, setSideNa
                             </div>
                         </Button>
                     </div>
-                    <p className='text-xs uppercase pb-[4vh] border-b border-zinc-600 mb-[4vw]'>navigation</p>
+                    <p className='text-xs uppercase pb-[4vh] border-b border-zinc-600 sm:mt-0 mt-[9vw] mb-[4vw]'>navigation</p>
                     <ul>
                         {["home", "work", "about", "contact"].map((item, index) => (
                             <Link to={`${item == "home" ? '/' : '/' + item}`}>
                                 <Magnetic points={0.07}>
-                                    <li key={index} className='md:text-[3.8vw] text-[10vw] capitalize md:leading-tight leading-snug md:after:w-[1vw] md:after:h-[1vw] after:w-[2vw] after:h-[2vw] dark:after:bg-white after:bg-black after:rounded-full hover:after:block after:hidden cursor-pointer dark:hover:text-white hover:text-[#1c1d20] flex items-center justify-between pr-[4vw]'><a href="/">{item}</a></li>
+                                    <li key={index} className='sm:text-[3.8vw] text-[11vw] capitalize md:leading-tight leading-snug md:after:w-[1vw] md:after:h-[1vw] dark:after:bg-white after:bg-black after:rounded-full hover:after:block after:hidden cursor-pointer dark:hover:text-white hover:text-[#1c1d20] flex items-center justify-between pr-[4vw]'><a href="/">{item}</a></li>
                                 </Magnetic>
                             </Link>
                         ))}

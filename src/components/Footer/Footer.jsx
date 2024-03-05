@@ -6,7 +6,7 @@ import { GoArrowDownLeft } from "react-icons/go";
 const Footer = () => {
     return (
         <>
-            <div className="w-full sm:h-screen h-[95vh] dark:bg-[#2f3136] bg-black sm:px-[4vw] px-[6vw] text-white">
+            <div className="w-full h-screen dark:bg-[#2f3136] bg-black sm:px-[4vw] px-[6vw] text-white">
                 <div className="w-full sm:px-[11vw] py-[15vh]">
                     <div className='sm:mb-0 mb-6'>
                         <div className='flex items-center gap-[1.8vw]'>
@@ -20,10 +20,10 @@ const Footer = () => {
                     <div className='w-full flex items-center relative justify-end'>
                         <div className='w-full h-[1px] dark:bg-[#888888] bg-[#1c1d20] absolute'></div>
                         <div data-scroll data-scroll-speed="-.2" data-scroll-direction ="horizontal" className="mr-[4vw]">
-                            <Button btnsize={"20vw"}>
+                            <Button className="sm:w-[12vw] sm:h-[12vw] w-[30vw] h-[30vw]">
                                 <div className='w-full h-full  bg-[#455CE9]'>
                                     <Magnetic points={0.5}>
-                                        <p className='sm:text-xl text-sm text-white'>Get in teuch</p>
+                                        <p className='sm:text-lg text-sm text-white'>Get in touch</p>
                                     </Magnetic>
                                 </div>
                             </Button>
@@ -41,11 +41,11 @@ const Footer = () => {
                 </div>
                 <div className="w-full flex sm:flex-row flex-col-reverse justify-between  sm:items-center">
                     <div className='sm:border-t-0 border-t sm:pt-0 pt-7 sm:mt-0 mt-8'>
-                        <p className="uppercase text-xs text-zinc-400 sm:mb-0 mb-3">version</p>
+                        <p className="uppercase text-xs text-zinc-400 mb-3">version</p>
                         <p className="uppercase text-sm">2024 © edition</p>
                     </div>
                     <div>
-                        <p className="uppercase text-xs text-zinc-400 sm:mb-0 mb-3">sosials</p>
+                        <p className="uppercase text-xs text-zinc-400 mb-3">sosials</p>
                         <div className='flex gap-[2vw]'>
                         {["LinkedIn", "Twitter", "Facebook"].map((item, index)=>(
                             <a key={index} href="/">{item}</a>

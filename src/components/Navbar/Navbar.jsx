@@ -118,8 +118,8 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className={`${scrollBtnToggle ? "scale-100" : "scale-0"} fixed right-8 top-8 z-[90]`} style={{ transition: "transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)" }}>
-                <Button smallBtn={75} bigBtn={85}>
+            <div className={`${scrollBtnToggle ? "scale-100" : "scale-0"} fixed sm:right-8 right-4 sm:top-8 top-4 z-[90]`} style={{ transition: "transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)" }}>
+                <Button className="sm:w-[5.5vw] w-[15vw] sm:h-[5.5vw] h-[15vw]">
                     <div className='w-full h-full bg-[#1C1D20] dark:bg-white text-white dark:text-black'>
                         <Magnetic points={0.4}>
                             <p>

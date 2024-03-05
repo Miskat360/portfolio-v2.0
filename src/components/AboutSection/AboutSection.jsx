@@ -8,7 +8,7 @@ const AboutSection = () => {
 
   return (
     <>
-      <div ref={container} id='container' className="w-full h-scree relative dark:bg-black bg-white dark:text-white text-[#1c1d20] px-[15vw] pt-[9vw] sm:flex">
+      <div ref={container} id='container' className="w-full h-scree relative dark:bg-black bg-white dark:text-white text-[#1c1d20] sm:px-[15vw] px-[4vw] pt-[9vw] sm:flex">
         <div className="basis-3/5">
           <p id="headTextcontainer">
             {headtext.split(" ").map((item, index) => (
@@ -21,8 +21,8 @@ const AboutSection = () => {
           <div className='mb-[2vw]'>
             <p className='sm:text-[1.2vw] text-[3vw]'>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</p>
           </div>
-          <div data-scroll data-scroll-speed=".2" className="z-10">
-              <Button smallBtn={100} bigBtn={185}>
+          <div data-scroll data-scroll-speed=".2" className="z-10 flex items-center justify-end">
+              <Button  className="sm:w-[12vw] sm:h-[12vw] w-[30vw] h-[30vw]">
                 <div className='w-full h-full bg-[#1c1d20] dark:bg-white'>
                   <Magnetic points={0.4}>
                     <p className='sm:text-lg text-md font-bold text-white dark:text-[#1c1d20] hover:dark:text-white tracking-wider dark:tracking-normal'>About me</p>
