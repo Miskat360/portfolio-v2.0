@@ -54,7 +54,7 @@ const ZoomParallax = () => {
 
     return (
         <>
-            <div ref={container} className="h-[300vh] relative -z-10">
+            <div ref={container} className="sm:h-[300vh] h-[200vh] relative -z-10">
                 <div className="sticky top-0 h-[100vh] dark:bg-black bg-white overflow-hidden">
                     {
                         pictures.map(({ src, scale }, index) => {
