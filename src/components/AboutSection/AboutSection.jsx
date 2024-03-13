@@ -17,7 +17,7 @@ const AboutSection = () => {
             ))}
           </p>
         </div>
-        <div className='basis-2/5 sm:pl-[12vw] sm:pt-0 pt-[4vw]'>
+        <div className='basis-2/5 sm:pl-[12vw] sm:pt-0 pt-[4vw] sm:block flex'>
           <div className='mb-[2vw]'>
             <p className='sm:text-[1.2vw] text-[3vw]'>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</p>
           </div>
