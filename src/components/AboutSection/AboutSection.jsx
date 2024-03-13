@@ -13,19 +13,19 @@ const AboutSection = () => {
           <p id="headTextcontainer">
             {headtext.split(" ").map((item, index) => (
               <p
-                key={index} className='sm:text-[2.2vw] text-[5vw] font-light sm:ml-2 ml-1 overflow-hidden inline-flex'><span>{item}</span></p>
+                key={index} className='sm:text-[2.2vw] text-[6vw] font-light sm:ml-2 ml-1 overflow-hidden inline-flex'><span>{item}</span></p>
             ))}
           </p>
         </div>
         <div className='basis-2/5 sm:pl-[12vw] sm:pt-0 pt-[4vw] sm:block flex'>
           <div className='mb-[2vw]'>
-            <p className='sm:text-[1.2vw] text-[3vw]'>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</p>
+            <p className='sm:text-[1.2vw] text-[4vw]'>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</p>
           </div>
           <div data-scroll data-scroll-speed=".2" className="z-10 flex items-center justify-end">
-              <Button  className="sm:w-[12vw] sm:h-[12vw] w-[30vw] h-[30vw]">
+              <Button  className="sm:w-[12vw] sm:h-[12vw] w-[35vw] h-[35vw]">
                 <div className='w-full h-full bg-[#1c1d20] dark:bg-white'>
                   <Magnetic points={0.4}>
-                    <p className='sm:text-lg text-md font-bold text-white dark:text-[#1c1d20] hover:dark:text-white tracking-wider dark:tracking-normal'>About me</p>
+                    <p className='sm:text-lg font-bold text-white dark:text-[#1c1d20] hover:dark:text-white tracking-wider dark:tracking-normal'>About me</p>
                   </Magnetic>
                 </div>
               </Button>

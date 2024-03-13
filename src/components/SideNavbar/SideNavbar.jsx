@@ -36,10 +36,10 @@ const SideNavbar = ({ navShowHide, setNavShowHide, sideNavBtnShowHide, setSideNa
                                             />
 
                                             {/* hamburger icon */}
-                                            <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
+                                            <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
 
                                             {/* close icon */}
-                                            <svg className="swap-on dark:fill-current fill-white" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
+                                            <svg className="swap-on dark:fill-current fill-white" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
 
                                         </label>
                                     </p>
@@ -52,7 +52,7 @@ const SideNavbar = ({ navShowHide, setNavShowHide, sideNavBtnShowHide, setSideNa
                         {["home", "work", "about", "contact"].map((item, index) => (
                             <Link to={`${item == "home" ? '/' : '/' + item}`}>
                                 <Magnetic points={0.07}>
-                                    <li key={index} className='sm:text-[3.8vw] text-[11vw] capitalize md:leading-tight leading-snug md:after:w-[1vw] md:after:h-[1vw] dark:after:bg-white after:bg-black after:rounded-full hover:after:block after:hidden cursor-pointer dark:hover:text-white hover:text-[#1c1d20] flex items-center justify-between pr-[4vw]'><a href="/">{item}</a></li>
+                                    <li key={index} className='sm:text-[3.8vw] text-[13vw] capitalize md:leading-tight leading-snug md:after:w-[1vw] md:after:h-[1vw] dark:after:bg-white after:bg-black after:rounded-full hover:after:block after:hidden cursor-pointer dark:hover:text-white hover:text-[#1c1d20] flex items-center justify-between pr-[4vw]'><a href="/">{item}</a></li>
                                 </Magnetic>
                             </Link>
                         ))}

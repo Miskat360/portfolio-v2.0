@@ -20,8 +20,8 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="w-full h-[90vh] text-white dark:bg-[#1C1D20] bg-[#999D9E] px-[4vw] overflow-hidden">
-        <div data-scroll data-scroll-section data-scroll-speed=".1" className='flex sm:flex-row flex-col-reverse sm:gap-0 gap-[6vw] sm:pt-[14vw] lg:pt-[5vw] md:pt-[10vw] pt-[22vw]'>
+      <div className="w-full md:h-[90vh] h-[86vh] text-white dark:bg-[#1C1D20] bg-[#999D9E] px-[4vw] overflow-hidden">
+        <div data-scroll data-scroll-section data-scroll-speed=".1" className='flex sm:flex-row flex-col-reverse sm:gap-0 gap-[6vw] sm:pt-[14vw] lg:pt-[5vw] md:pt-[10vw] pt-[15vw]'>
           <div className=' basis-2/3'>
             {["we create", "eye-opening", "presentations"].map((item, index) => (
               <div key={index} className='flex items-center gap-[1.2vw]'>
@@ -83,7 +83,7 @@ const HeroSection = () => {
             ))}
           </div>
           <div className='md:text-[2.5vw] sm:text-[3vw] text-[5vw] basis-1/3'>
-            <div data-scroll data-scroll-section data-scroll-speed=".1" className={`md:w-[7vw] md:h-[7vw] sm:w-[8vw] sm:h-[8vw] w-[18vw] sm:border-4 border-2 rounded-full overflow-hidden md:relative sticky top-2`}>
+            <div data-scroll data-scroll-section data-scroll-speed=".1" className={`md:w-[7vw] md:h-[7vw] sm:w-[8vw] sm:h-[8vw] w-[22vw] sm:border-4 border-2 rounded-full overflow-hidden md:relative sticky top-2`}>
               <img src={myimg} alt="" className='w-full h-full object-cover' />
             </div>
             <div data-scroll data-scroll-section data-scroll-speed=".08" className='mb-4'><GoArrowDownRight /></div>
@@ -91,7 +91,7 @@ const HeroSection = () => {
             <h1 data-scroll data-scroll-section data-scroll-speed=".05">Designer & Developer</h1>
           </div>
         </div>
-        <div data-scroll data-scroll-section data-scroll-speed=".05" className='flex whitespace-nowrap select-none sm:mt-0 mt-[40vw]'>
+        <div data-scroll data-scroll-section data-scroll-speed=".05" className='flex whitespace-nowrap select-none sm:mt-0 mt-[36vw]'>
           {["Code by Miskat Hasan —", "Code by Miskat Hasan —", "Code by Miskat Hasan —"].map((item, index) => (
             <motion.h1
               initial={{ x: "0" }}
