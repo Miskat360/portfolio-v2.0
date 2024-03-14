@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <>
             <div className="w-full h-screen dark:bg-[#2f3136] bg-black sm:px-[4vw] px-[6vw] text-white">
-                <div className="w-full sm:px-[11vw] py-[15vh]">
+                <div className="w-full sm:px-[11vw] pt-[15vh] sm:pb-[15vh] pb-[13vh]">
                     <div className='sm:mb-0 mb-6'>
                         <div className='flex items-center gap-[1.8vw]'>
                             <div className='sm:w-[5vw] w-[12vw] sm:h-[5vw] h-[12vw] rounded-full overflow-hidden'>
