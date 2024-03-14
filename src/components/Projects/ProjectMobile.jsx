@@ -5,20 +5,25 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-creative";
+import "swiper/css/pagination";
 
 // import required modules
-import { EffectCreative } from "swiper/modules";
+import { EffectCreative, Pagination } from "swiper/modules";
+// import { Pagination } from 'swiper/modules';
 
 import img1 from "../../assets/projectSm1.jpg";
 import img2 from "../../assets/projectSm2.jpg";
 import img3 from "../../assets/projectSm3.jpg";
 import img4 from "../../assets/projectSm4.jpg";
 const ProjectMobile = () => {
-  //   const ProjectImg = [img1, img2, img3, img4];
+  const ProjectImg = [img1, img2, img3, img4];
   return (
     <>
-      <div className="w-full bg-red-700 text-center">
+      <div className="w-full">
         <Swiper
+          pagination={{
+            dynamicBullets: true,
+          }}
           grabCursor={true}
           effect={"creative"}
           creativeEffect={{
@@ -30,40 +35,21 @@ const ProjectMobile = () => {
               translate: ["100%", 0, 0],
             },
           }}
-          modules={[EffectCreative]}
+          modules={[Pagination, EffectCreative]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div
-              className="w-full h-[40vh] bg-blue-800 flex items-center justify-center"
-            >
-              <img
-                src={img1}
-                alt=""
-                className="w-full h-full object-cover rounded-[15px]"
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              className="w-full h-[40vh] bg-blue-800 flex items-center justify-center"
-            >
-              <img
-                src={img2}
-                alt=""
-                className="w-full h-full object-cover rounded-[15px]"
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          {ProjectImg.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="w-full h-[40vh] flex items-center justify-center">
+                <img
+                  src={item}
+                  alt=""
+                  className="w-full h-full object-cover rounded-[15px]"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
-        <p className="pt-3 text-lg">Chect out all Projects</p>
       </div>
     </>
   );
