@@ -25,7 +25,7 @@ const Home = () => {
         <>
             <motion.div className="progress-bar" style={{ scaleX }} />
             <Loader />
-            <Navbar />
+            <Navbar BgColorDark={'#1C1D20'} BgColorLight={'#999D9E'} textColorLight={'text-white'}/>
             <HeroSection />
             <AboutSection />
             <ZoomParallax />

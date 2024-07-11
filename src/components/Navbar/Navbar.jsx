@@ -5,7 +5,7 @@ import styles from './Navbar.module.scss'
 import SideNavbar from '../SideNavbar/SideNavbar'
 import { Link, NavLink } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({BgColorLight, BgColorDark, textColorLight, textColorDark}) => {
 
     const [navShowHide, setNavShowHide] = useState(false)
     const [scrollBtnToggle, setScrollBtnToggle] = useState(false)
@@ -40,7 +40,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="w-full dark:bg-[#1C1D20] bg-[#999D9E] px-[4vw] lg:h-[6vw] md:h-[10vw] sm:h-[12vw] h-[24vw] text-white flex items-center justify-between">
+            <div className={`w-full ${textColorDark, textColorLight} dark:bg-[${BgColorDark}] bg-[${BgColorLight}] px-[4vw] lg:h-[6vw] md:h-[10vw] sm:h-[12vw] h-[24vw] flex items-center justify-between`}>
                 <Link to="/">
                     <div onMouseEnter={() => {
                         setSpin(true)
